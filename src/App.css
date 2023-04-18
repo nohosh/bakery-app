@@ -1,38 +1,114 @@
-.App {
-  text-align: center;
+nav {
+	height: 20vh;
+	background-color: bisque;
+	position: relative;
+}
+nav ul {
+	display: flex;
+	position: absolute;
+	background-color: white;
+	left: 50%;
+	list-style: none;
+	padding: 30px;
+	transform: translate(-50%, 25%);
+	box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+nav ul li {
+	margin: 0 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+nav ul li a {
+	display: flex;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+ul {
+	margin: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.img-header {
+	width: 50px;
 }
 
-.App-link {
-  color: #61dafb;
+.header-tab-title {
+	margin-bottom: 0px;
+}
+.header-tab-desc {
+	font-size: 5px;
+	max-width: 100px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.page {
+	margin: 80px 0;
+	padding: 0 40px;
+}
+
+.page-heading {
+	text-align: center;
+}
+
+.cart {
+	position: fixed;
+	right: 5%;
+	bottom: 5%;
+	margin: 20px 10px;
+	z-index: 2;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+	grid-gap: 20px;
+	align-items: stretch;
+}
+
+.grid > article {
+	position: relative;
+	border: 1px solid #ccc;
+	box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+}
+
+.grid > article img {
+	max-width: 100%;
+}
+
+.grid .text {
+	padding: 20px;
+	text-align: center;
+}
+
+.text h5 {
+	color: crimson;
+}
+
+.add-to-cart {
+	display: inline-block;
+	position: absolute;
+	bottom: -7px;
+	padding: 5px;
+	transform: translateX(-50%);
+	margin: 0;
+	border: 1px solid black;
+	background: white;
+}
+
+.add-to-cart:hover {
+	cursor: pointer;
+	color: white;
+	background: black;
+}
+
+.delete-from-cart {
+	background: crimson;
+	color: white;
+}
+
+.delete-from-cart:hover {
+	cursor: pointer;
+	color: red;
+	background: white;
 }
